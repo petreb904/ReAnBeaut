@@ -1,28 +1,26 @@
 <!DOCTYPE html>
-<html lang="en-hu">
+<html lang="hu-en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Laracoding.com CSS example</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Főoldal</title>
+    <link rel="stylesheet" type="text/css" href="resorcues/css/style.css">
+
 </head>
-<body>
-    <h1>sdfgh</h1>
-    <section class="section">
-    <div class="container">
-        <div class="columns">
-            <div class="column">
-                <div class="card">
-                    <div class="header">
-                        <h1>1</h1>
-                    </div>
-                    <div class="container">
-                        <p>April 30, 2024</p>
-                    </div>
-                </div>
+    <body>
+       <main>
+           <div>
+           <h1 class="cimm">Hello Laravel</h1>
+
+                <img src="{{ url('kepek/hambi.png') }}" alt="Hambi">
+                <img src="{{ url('kepek/ReAnLogo.png') }}" alt="ReAnLogo">
+                <center><h1 class="cim">ReAnBeauty</h1></center>
+                <h3 class="bejelentkezes-regisztracio">Bejelentkezés/Regisztráció</h3>
+                <h2>Főoldal</h2>
+
+
             </div>
-        </div>
-    </div>
-</section>
-</body>
+       
+        </main>
+    </body>
 </html>

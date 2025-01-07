@@ -18,3 +18,27 @@ Route::get('/', function () {
     return view('index');
     
 });
+
+
+Route::get('/css/style.css', function () {
+    $path = resource_path('css/style.css');
+    if (!File::exists($path)) {
+        abort(404);
+    }
+
+    return response()->file($path, [
+        'Content-Type' => 'text/css',
+    ]);
+});
+Route::get('/kepek/{filename}', function ($filename) {
+    $path = base_path('kepek/' . $filename);
+
+    if (!File::exists($path)) {
+        abort(404);
+    }
+
+    return response()->file($path);
+});
+
+
+
