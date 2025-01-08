@@ -1,14 +1,69 @@
 body{
-  background-color: rgb(234, 94, 94);
+  background-color: white;
 }
-.cim {
-  text-align: center;
-}
-.cimm {
-  color: blue;
-  text-align: center;
+.fejlec{
+  background-color: rgb(242, 224, 224);
+  height: 100px;
+  border-color: rgb(242, 224, 224); 
+  border-width: 30px;
+
 }
 
+
+.fooldalcim{
+  text-align: right;
+  margin-right: 740px;
+  margin-top: -60px;
+
+}
+.ReAnLogo{
+  width:90px;
+  height: 90px;
+  border-radius: 225px 225px 225px 225px;
+}
+
+
+
+
 .bejelentkezes-regisztracio{
-  float: right;
+ text-align: right;
+ margin-right: 200px;
+ margin-top: -65px;
+ 
+}
+
+
+.ReAnFokep{
+  width: 100%;
+  height:auto;
+  
+}
+
+.container {
+  display: flex; 
+  justify-content: center;
+  align-items: center; 
+  height: 100vh; 
+}
+
+.box {
+  width: 95%;
+  height: 60%;
+  background-color: rgb(62, 122, 142);
+}
+.text {
+  flex: 1; /* A szöveg blokk bal oldalt */
+  padding: 20px;
+}
+
+.container-logo {
+  flex: 1; 
+  text-align: center;
+  width:250px;
+  height: 250px;
+}
+
+.image img {
+  max-width: 100%; /* A kép nem lép ki a szülő elemből */
+  height: auto; /* Megőrzi a képarányt */
 }

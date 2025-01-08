@@ -4,23 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Főoldal</title>
-    <link rel="stylesheet" type="text/css" href="resorcues/css/style.css">
-
+    <link href="{{ asset('/css/style.css') }}" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/af0adec3b9.js" crossorigin="anonymous"></script>
 </head>
     <body>
-       <main>
-           <div>
-           <h1 class="cimm">Hello Laravel</h1>
-
-                <img src="{{ url('kepek/hambi.png') }}" alt="Hambi">
-                <img src="{{ url('kepek/ReAnLogo.png') }}" alt="ReAnLogo">
-                <center><h1 class="cim">ReAnBeauty</h1></center>
-                <h3 class="bejelentkezes-regisztracio">Bejelentkezés/Regisztráció</h3>
-                <h2>Főoldal</h2>
-
+     <header class="fejlec">
+     <img src="{{ url('kepek/ReAnLogo.png') }}"  class="ReAnLogo" alt="ReAnLogo">
+     
+    
+     <h3 class="bejelentkezes-regisztracio">Bejelentkezés/Regisztráció</h3>
+     
+     </header>
+     
+      <main>
+                <h2 class="fooldalcim">Főoldal</h2>
+                <img src="{{ url('kepek/ReAnBeautyFokep.png') }}"  class="ReAnFokep" alt="ReAnLogo">
+                <div class="container">
+             <div class="text">
+             <h1>Bal oldali szöveg</h1>
+              <p>Ez egy példa szöveg a bal oldalon.</p>
+             </div>
+            <div class="container-logo">
+            <img src="{{ url('kepek/ReAnLogo.png') }}"  class="ReAnFokep" alt="ReAnLogo">
 
             </div>
-       
+            </div>
+
         </main>
+        
     </body>
 </html>
