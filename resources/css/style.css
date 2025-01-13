@@ -1,69 +1,509 @@
 body{
-  background-color: white;
-}
-.fejlec{
-  background-color: rgb(242, 224, 224);
-  height: 100px;
-  border-color: rgb(242, 224, 224); 
-  border-width: 30px;
+
+  background-color: rgb(255, 244, 244);
 
 }
 
 
-.fooldalcim{
-  text-align: right;
-  margin-right: 740px;
-  margin-top: -60px;
 
-}
-.ReAnLogo{
-  width:90px;
-  height: 90px;
-  border-radius: 225px 225px 225px 225px;
+/*Header*/
+
+.menu-container {
+  position: relative;
+  display:flex;
+  margin: 3px;
+  height: 0px;
 }
 
-
-
-
-.bejelentkezes-regisztracio{
- text-align: right;
- margin-right: 200px;
- margin-top: -65px;
- 
+.menu-item {
+  padding: 10px 20px;
+  background-color: #fffdff;
+  color: rgb(36, 36, 36);
+  cursor: pointer;
+  border-radius: 5px;
+  position: relative;
+ left:1150px;
+ margin-top: -80px;
 }
 
+.menu-item:hover {
+  background-color: #f9f8f8;
+}
 
-.ReAnFokep{
-  width: 100%;
-  height:auto;
+/* Lenyíló menü */
+.dropdown-menu {
+  display: none; /* Kezdetben rejtett */
+  position: absolute;
+  top: 100%; /* A szülőelem alatt helyezkedik el */
+  left: 0px;
+  background-color: #ffffff;
+  border: 1px solid #7d7a7a;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  z-index: 1000;
+  border-radius: 5px;
+  min-width: 150px;
+}
+
+/* Amikor az egér az elem fölé kerül */
+.menu-item:hover .dropdown-menu {
+  display: block; /* A menü megjelenik */
+}
+
+/* Menüelemek */
+.dropdown-menu a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f4bbbb;
   
 }
 
+.sideMenu {
+	height: 15%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background: darksalmon;
+	overflow-x: hidden;
+	transition: 0.5s;
+	padding-top: 60px;
+}
+.main-menu h2 {
+	text-align: center;
+	letter-spacing: 7px;
+	color: #0d0d0d;
+	background: #111;
+	padding: 20px 0;
+}
+.sideMenu a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	color: #000000;
+	display: block;
+	transition: 0.3s;
+	font-size: 18px;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	font-weight: 900;
+}
+.sideMenu a i {
+	padding-right: 15px;
+}
+.main-menu a:hover {
+	color: #0e0d0d;
+	background: #111;
+}
+.sideMenu .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+}
+#content-area {
+	transition: margin-left .5s;
+	padding: 16px;
+}
+.content-text {
+	padding: 100px 180px;
+	text-align: center;
+}
+.content-text h2 {
+	background: darksalmon;
+	display: inline-block;
+	padding: 15px 35px;
+	text-transform: uppercase;
+	font-size: 50px;
+	color: #000000;
+}
+.content-text h3 {
+	text-transform: uppercase;
+	font-size: 45px;
+	margin: 0;
+	letter-spacing: 3px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.reanbeauty-cim-div {
+  transition: all 0.3s ease; /* Simább animáció */
+  width: 200px;
+  
+}
+
+.reanbeauty-cim-div:hover {
+  background-color: rgba(255, 255, 255, 0.3); /* Háttérszín változik */
+  transform: scale(1.05); /* Enyhe nagyítás */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Árnyék megjelenik */
+}
+
+.ReAnLogo{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.ReAnBeauty-cim{
+  position: relative;
+  left: 100px;
+  margin-top: -40px;
+}
+
+.homepage-cim{
+  position: relative;
+  left: 550px;
+  margin-top: -40px;
+}
+
+/*index*/
+
+.ReAnFokep{
+ position: relative;
+
+ width: 1250px;
+ height: 500px;
+}
+
+.bejelentkezes-gomb {
+  background-color: #eee;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  width: 150px;
+  height: 35px;
+  border-radius: 1rem;
+  color: lightcoral;
+  box-shadow: 0 0.4rem #dfd9d9;
+  cursor: pointer;
+  position: relative;
+  left: 1000px;
+  margin-top: -50px;
+  
+ }
+ 
+ .bejelentkezes-gomb:active {
+  color: white;
+  box-shadow: 0 0.2rem #dfd9d9;
+  transform: translateY(0.2rem);
+ }
+ 
+ .bejelentkezes-gomb:hover:not(:disabled) {
+  background: lightcoral;
+  color: white;
+  text-shadow: 0 0.1rem #bcb4b4;
+ }
+ 
+ .bejelentkezes-gomb:disabled {
+  cursor: auto;
+  color: grey;
+ }
+
+
+ .regisztracio {
+  background-color: #eee;
+  border: none;
+  padding: 1rem;
+  font-size: 1rem;
+  width: 150px;
+  height: 35px;
+  border-radius: 1rem;
+  color: lightcoral;
+  box-shadow: 0 0.4rem #dfd9d9;
+  cursor: pointer;
+  position: relative;
+  left: 820px;
+  margin-top: -50px;
+  
+ }
+ 
+ .regisztracio:active {
+  color: white;
+  box-shadow: 0 0.2rem #dfd9d9;
+  transform: translateY(0.2rem);
+ }
+ 
+ .regisztracio:hover:not(:disabled) {
+  background: lightcoral;
+  color: white;
+  text-shadow: 0 0.1rem #bcb4b4;
+ }
+ 
+ .regisztracio:disabled {
+  cursor: auto;
+  color: grey;
+ }
+
+
+/*Index*/
+
+/* Reklámszöveg */
+.reklamszoveg {
+  text-shadow: pink;
+  font-size: 23px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+
+
+.reklamszoveg-div{
+  width: 600px;
+  height: 600px;
+  background-color: rgb(242, 224, 224);
+}
+
+/* From Uiverse.io by alexroumi */ 
+/* From Uiverse.io by shah1345 */ 
+.button-join {
+  display: inline-block;
+  transition: all 0.2s ease-in;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  color: #090909;
+  padding: 0.7em 1.7em;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 50px;
+ left: 150px;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+
+.button-join:active {
+  color: #6b6666;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ff459f;
+}
+
+.button-join:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.button-join:after {
+  content: "";
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  background-color: #009087;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.button-join:hover {
+  color: #ffffff;
+  border: 1px solid #ffe0f7;
+}
+
+.button-join:hover:before {
+  top: -35%;
+  background-color: #fcaffe;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.button-join:hover:after {
+  top: 45%;
+  background-color: #feb5f9;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+/* Logó blokk */
+/* Konténer a szöveg és logó elrendezéséhez */
 .container {
-  display: flex; 
-  justify-content: center;
-  align-items: center; 
-  height: 100vh; 
-}
-
-.box {
-  width: 95%;
-  height: 60%;
-  background-color: rgb(62, 122, 142);
-}
-.text {
-  flex: 1; /* A szöveg blokk bal oldalt */
+  display: flex; /* Flexbox az elemek egymás melletti elrendezéséhez */
+  justify-content: space-between; /* Térköz a szöveg és a logó között */
+  align-items: stretch; /* Az elemeket azonos magasságúra igazítja */
   padding: 20px;
+  height: auto; /* A magasság az elemek tartalmához igazodik */
+  background-color: rgba(236, 228, 228, 0.914);  
 }
 
+/* Logó blokk */
 .container-logo {
-  flex: 1; 
-  text-align: center;
-  width:250px;
-  height: 250px;
+  flex: 1; /* A logó blokk a jobb oldalon helyezkedik el */
+  display: flex; /* Flexbox az elemen belüli elrendezéshez */
+  justify-content: center; /* Tartalom vízszintes középre igazítása */
+  background-color: rgba(236, 228, 228, 0.914);  
+  border-radius: 10px;
+  width: 600px; /* Fix szélesség */
+  height: 600px; /* Fix magasság */
+  object-fit: cover; /* Kép arányainak megtartása */
+  position: relative;
+  left: 635px;
+  margin-top: -600px;
+
 }
 
-.image img {
-  max-width: 100%; /* A kép nem lép ki a szülő elemből */
-  height: auto; /* Megőrzi a képarányt */
+/*footer*/
+
+.container{
+  max-width: 1170px;
+  margin: auto;
 }
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul{
+  list-style:none;
+}
+
+.footer-body{
+  width: 1250px;
+  
+  
+}
+
+.footer{
+  height: 400px;
+  padding: 0 15px;
+  background-color: rgb(219, 214, 214);
+}
+
+.footer-col{
+
+  width: 205%;
+  padding: 0 15px;
+  
+}
+
+.footer-col h4{
+  position: relative;
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+}
+
+.footer-col h4::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: rgb(255, 179, 232);
+  height: 2px;
+  box-sizing: border-box;
+  width: 100px;
+}
+
+.footer-col ul li:not(:last-child){
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a{
+  font-size: 16px;
+  text-transform: capitalize;
+  color: rgb(0, 0, 0);
+  font-weight: 400px;
+  text-decoration: none;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover{
+  color:rgb(255, 0, 153);
+  padding-left:8px;
+}
+
+.foote .social-links a{
+  display: inline-block;
+  height: 400px;
+  width: 400px;
+  color:rgb(255, 0, 153);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: white;
+  transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover{
+  color:black;
+  color:rgb(255, 0, 153);
+}
+
+.footer-ReAnFokep{
+  width: 695px;
+  height: 395px;
+  object-fit: cover; 
+  position: relative;
+  left: 535px;
+  margin-top: -348px;
+}
+
+@media(max-width:767px) {
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+
+@media(max-width:574px) {
+  .footer-col{
+  width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
