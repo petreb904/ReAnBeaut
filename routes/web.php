@@ -19,6 +19,21 @@ Route::get('/', function () {
     
 });
 
+Route::get('/login', function () {
+    return view('login');
+    
+});
+Route::get('/signup ', function () {
+    return view('signup ');
+    
+});
+Route::get('/footer', function () {
+    return view('footer');
+    
+});
+
+
+
 
 Route::get('/css/style.css', function () {
     $path = resource_path('css/style.css');
@@ -30,6 +45,22 @@ Route::get('/css/style.css', function () {
         'Content-Type' => 'text/css',
     ]);
 });
+
+
+
+Route::get('/js/program.js', function () {
+    $path = resource_path('/js/program.js');
+    if (!File::exists($path)) {
+        abort(404);
+    }
+
+    return response()->file($path, [
+        'Content-Type' => 'text/js',
+    ]);
+});
+
+
+
 Route::get('/kepek/{filename}', function ($filename) {
     $path = base_path('kepek/' . $filename);
 
