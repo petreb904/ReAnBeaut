@@ -13,12 +13,11 @@ return new class extends Migration
     {
         Schema::create('products_review', function (Blueprint $table) {
             $table->id();
-            $table->varchar('rutin_type');
-            $table->varchar('title');
-            $table->text('image');
-            $table->text('summary');
-            $table->int('users_id');
-            $table->dateTime('created_at');
+            $table->int('product_id');
+            $table->int('user_id');
+            $table->text('comment');
+            $table->int('like');
+            $table->dateTime('watched_at');
         });
     }
 

@@ -11,7 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('rutin_review', function (Blueprint $table) {
+            $table->id();
+            $table->int('product_id');
+            $table->int('user_id');
+            $table->int('rutin_id');
+            $table->text('comment');
+            $table->int('like');
+            $table->dateTime('watched_at');
+        });
     }
 
     /**
@@ -19,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('rutin_review');
     }
 };

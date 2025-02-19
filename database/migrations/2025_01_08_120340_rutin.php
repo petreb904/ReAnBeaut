@@ -11,7 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('rutin', function (Blueprint $table) {
+            $table->id();
+            $table->int('product_id');
+            $table->int('user_id');
+            $table->varchar('rutin_type');
+            $table->varchar('title');
+            $table->text('image_video');
+            $table->text('summary');
+            $table->dateTime('created_at');
+        });
     }
 
     /**
@@ -19,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('rutin');
     }
 };
